@@ -1,3 +1,12 @@
+//This was my first attempt on a linked list data structure, I used pre-created objects at first
+// because I didn't conceptualize the structure being solely stored inside intances of classes and
+// the objects being automaticaly created from that structure.
+//The structure using pre-fabricated objects does work pretty much the same way as in class-instances-objects, 
+// but it may have a little less performance.
+//I've also used recursive functions to pass through all objects inside the linked list since 
+// it was the previously studied subject
+//The second version at the module.js file uses solely classes.
+
 //Node function: return node with value and next key that links to the next node.
 const Node = (value) => {  
     let node = {value: null, next: null};
@@ -118,7 +127,6 @@ class LinkedList {
     }
     // removes node at given index
     removeAt(index) {
-
         if(index > this.size()) {
             return "Index > Size";
         }
@@ -130,10 +138,7 @@ class LinkedList {
         let firstHalf = this.at(index - 1);
         firstHalf.next = secondHalf;
         return this.toString();
-
     }
-
-
 }
 
 let newList = new LinkedList()
